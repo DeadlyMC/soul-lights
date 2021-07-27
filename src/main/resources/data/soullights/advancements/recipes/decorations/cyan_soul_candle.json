@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "soullights:cyan_soul_candle"
+    ]
+  },
+  "criteria": {
+    "has_cyan_dye": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cyan_dye"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "soullights:cyan_soul_candle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cyan_dye",
+      "has_the_recipe"
+    ]
+  ]
+}

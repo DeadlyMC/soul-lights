@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "soullights:item/light_blue_soul_candle"
+  }
+}

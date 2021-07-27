@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "soullights:soul_candle",
+    "soullights:white_soul_candle",
+    "soullights:orange_soul_candle",
+    "soullights:magenta_soul_candle",
+    "soullights:light_blue_soul_candle",
+    "soullights:yellow_soul_candle",
+    "soullights:lime_soul_candle",
+    "soullights:pink_soul_candle",
+    "soullights:gray_soul_candle",
+    "soullights:light_gray_soul_candle",
+    "soullights:cyan_soul_candle",
+    "soullights:purple_soul_candle",
+    "soullights:blue_soul_candle",
+    "soullights:brown_soul_candle",
+    "soullights:green_soul_candle",
+    "soullights:red_soul_candle",
+    "soullights:black_soul_candle"
+  ]
+}

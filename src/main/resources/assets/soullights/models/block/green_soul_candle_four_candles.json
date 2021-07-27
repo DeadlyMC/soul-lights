@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_four_candles",
+  "textures": {
+    "all": "soullights:block/green_soul_candle",
+    "particle": "soullights:block/green_soul_candle"
+  }
+}

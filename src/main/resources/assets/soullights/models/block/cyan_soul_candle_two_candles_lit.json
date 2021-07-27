@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_two_candles",
+  "textures": {
+    "all": "soullights:block/cyan_soul_candle_lit",
+    "particle": "soullights:block/cyan_soul_candle_lit"
+  }
+}

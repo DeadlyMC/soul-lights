@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "soullights:yellow_soul_candle_from_yellow_candle"
+    ]
+  },
+  "criteria": {
+    "has_soul_fire_base_blocks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": [
+              "minecraft:soul_fire_base_blocks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "soullights:yellow_soul_candle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_soul_fire_base_blocks",
+      "has_the_recipe"
+    ]
+  ]
+}

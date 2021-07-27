@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_soul_candle",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_candle"
+    },
+    {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  ],
+  "result": {
+    "item": "soullights:cyan_soul_candle"
+  }
+}
