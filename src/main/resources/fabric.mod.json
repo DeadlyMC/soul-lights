@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Soul Lights",
-  "description": "A Minecraft mod that adds soul fire based lights.",
+  "description": "Adds soul fire based lights.",
   "authors": [
     "DeadlyMC"
   ],
