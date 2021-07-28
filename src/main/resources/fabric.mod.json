@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "Soul Lights",
-  "description": "",
+  "description": "A Minecraft mod that adds soul fire based lights.",
   "authors": [
     "DeadlyMC"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/soul-lights",
+    "sources": "https://github.com/DeadlyMC/soul-lights",
+    "issues": "https://github.com/DeadlyMC/soul-lights/issues"
   },
 
   "license": "MIT",
