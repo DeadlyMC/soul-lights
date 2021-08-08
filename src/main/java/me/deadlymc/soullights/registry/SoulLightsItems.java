@@ -1,37 +1,41 @@
 package me.deadlymc.soullights.registry;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import static me.deadlymc.soullights.SoulLights.MODID;
-import static me.deadlymc.soullights.registry.SoulLightsBlocks.*;
 
 public class SoulLightsItems
 {
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+    public static final RegistryObject<Item> SOUL_CANDLE = ITEMS.register("soul_candle", () -> new BlockItem(SoulLightsBlocks.SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> WHITE_SOUL_CANDLE = ITEMS.register("white_soul_candle", () -> new BlockItem(SoulLightsBlocks.WHITE_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> ORANGE_SOUL_CANDLE = ITEMS.register("orange_soul_candle", () -> new BlockItem(SoulLightsBlocks.ORANGE_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> MAGENTA_SOUL_CANDLE = ITEMS.register("magenta_soul_candle", () -> new BlockItem(SoulLightsBlocks.MAGENTA_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_BLUE_SOUL_CANDLE = ITEMS.register("light_blue_soul_candle", () -> new BlockItem(SoulLightsBlocks.LIGHT_BLUE_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> YELLOW_SOUL_CANDLE = ITEMS.register("yellow_soul_candle", () -> new BlockItem(SoulLightsBlocks.YELLOW_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> LIME_SOUL_CANDLE = ITEMS.register("lime_soul_candle", () -> new BlockItem(SoulLightsBlocks.LIME_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> PINK_SOUL_CANDLE = ITEMS.register("pink_soul_candle", () -> new BlockItem(SoulLightsBlocks.PINK_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> GRAY_SOUL_CANDLE = ITEMS.register("gray_soul_candle", () -> new BlockItem(SoulLightsBlocks.GRAY_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_GRAY_SOUL_CANDLE = ITEMS.register("light_gray_soul_candle", () -> new BlockItem(SoulLightsBlocks.LIGHT_GRAY_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> CYAN_SOUL_CANDLE = ITEMS.register("cyan_soul_candle", () -> new BlockItem(SoulLightsBlocks.CYAN_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> PURPLE_SOUL_CANDLE = ITEMS.register("purple_soul_candle", () -> new BlockItem(SoulLightsBlocks.PURPLE_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> BLUE_SOUL_CANDLE = ITEMS.register("blue_soul_candle", () -> new BlockItem(SoulLightsBlocks.BLUE_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> BROWN_SOUL_CANDLE = ITEMS.register("brown_soul_candle", () -> new BlockItem(SoulLightsBlocks.BROWN_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> GREEN_SOUL_CANDLE = ITEMS.register("green_soul_candle", () -> new BlockItem(SoulLightsBlocks.GREEN_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> RED_SOUL_CANDLE = ITEMS.register("red_soul_candle", () -> new BlockItem(SoulLightsBlocks.RED_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> BLACK_SOUL_CANDLE = ITEMS.register("black_soul_candle", () -> new BlockItem(SoulLightsBlocks.BLACK_SOUL_CANDLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+
+    public static final RegistryObject<Item> SOUL_O_LANTERN = ITEMS.register("soul_o_lantern", () -> new BlockItem(SoulLightsBlocks.SOUL_O_LANTERN.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+
     public static void register()
     {
-        Registry.register(Registry.ITEM, new Identifier(MODID, "soul_candle"), new BlockItem(SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "white_soul_candle"), new BlockItem(WHITE_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "orange_soul_candle"), new BlockItem(ORANGE_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "magenta_soul_candle"), new BlockItem(MAGENTA_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "light_blue_soul_candle"), new BlockItem(LIGHT_BLUE_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "yellow_soul_candle"), new BlockItem(YELLOW_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "lime_soul_candle"), new BlockItem(LIME_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "pink_soul_candle"), new BlockItem(PINK_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "gray_soul_candle"), new BlockItem(GRAY_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "light_gray_soul_candle"), new BlockItem(LIGHT_GRAY_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "cyan_soul_candle"), new BlockItem(CYAN_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "purple_soul_candle"), new BlockItem(PURPLE_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "blue_soul_candle"), new BlockItem(BLUE_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "brown_soul_candle"), new BlockItem(BROWN_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "green_soul_candle"), new BlockItem(GREEN_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "red_soul_candle"), new BlockItem(RED_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        Registry.register(Registry.ITEM, new Identifier(MODID, "black_soul_candle"), new BlockItem(BLACK_SOUL_CANDLE, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-
-        Registry.register(Registry.ITEM, new Identifier(MODID, "soul_o_lantern"), new BlockItem(SOUL_O_LANTERN, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

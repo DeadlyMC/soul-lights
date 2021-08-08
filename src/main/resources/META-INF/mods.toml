@@ -1,0 +1,17 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT License"
+
+issueTrackerURL="https://github.com/DeadlyMC/soul-lights/issues"
+
+[[mods]]
+modId="soullights"
+version="${file.jarVersion}"
+displayName="Soul Lights"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/soul-lights-forge"
+logoFile="icon.png"
+credits=""
+authors="DeadlyMC"
+description='''
+A Minecraft mod that adds soul fire based lights.
+'''

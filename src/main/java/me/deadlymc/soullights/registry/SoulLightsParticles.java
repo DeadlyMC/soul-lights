@@ -1,20 +1,38 @@
 package me.deadlymc.soullights.registry;
 
-import me.deadlymc.soullights.SoulLights;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.FlameParticle;
-import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import static me.deadlymc.soullights.SoulLights.MODID;
 
 public class SoulLightsParticles
 {
-    public static final DefaultParticleType SMALL_SOUL_FLAME = FabricParticleTypes.simple();
+    private static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, MODID);
+    public static final RegistryObject<SimpleParticleType> SMALL_SOUL_FLAME = PARTICLE_TYPES.register("small_soul_flame", () -> new SimpleParticleType(false));
+
+    @Mod.EventBusSubscriber(modid = MODID, bus = Bus.MOD)
+    private static class ParticleRegistryEvent
+    {
+        @SubscribeEvent
+        public static void register(ParticleFactoryRegisterEvent event)
+        {
+            System.out.println("REGISTERED SOUL PARTICLE FACTORIES!");
+            Minecraft.getInstance().particleEngine.register(SMALL_SOUL_FLAME.get(), FlameParticle.SmallFlameProvider::new);
+        }
+    }
 
     public static void register()
     {
-        Registry.register(Registry.PARTICLE_TYPE, new Identifier(SoulLights.MODID, "small_soul_flame"), SMALL_SOUL_FLAME);
-        ParticleFactoryRegistry.getInstance().register(SMALL_SOUL_FLAME, FlameParticle.SmallFactory::new);
+        PARTICLE_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

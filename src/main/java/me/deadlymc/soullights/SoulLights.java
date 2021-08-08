@@ -3,14 +3,14 @@ package me.deadlymc.soullights;
 import me.deadlymc.soullights.registry.SoulLightsBlocks;
 import me.deadlymc.soullights.registry.SoulLightsItems;
 import me.deadlymc.soullights.registry.SoulLightsParticles;
-import net.fabricmc.api.ModInitializer;
+import net.minecraftforge.fml.common.Mod;
 
-public class SoulLights implements ModInitializer
+@Mod(SoulLights.MODID)
+public class SoulLights
 {
     public static final String MODID = "soullights";
 
-    @Override
-    public void onInitialize()
+    public SoulLights()
     {
         SoulLightsBlocks.register();
         SoulLightsItems.register();
