@@ -26,7 +26,6 @@ public class SoulLightsParticles
         @SubscribeEvent
         public static void register(ParticleFactoryRegisterEvent event)
         {
-            System.out.println("REGISTERED SOUL PARTICLE FACTORIES!");
             Minecraft.getInstance().particleEngine.register(SMALL_SOUL_FLAME.get(), FlameParticle.SmallFlameProvider::new);
         }
     }
